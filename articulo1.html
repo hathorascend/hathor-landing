@@ -47,6 +47,11 @@
     .article-content blockquote { border-left: 3px solid var(--color-accent); padding-left: var(--spacing-md); margin: var(--spacing-lg) 0; font-style: italic; color: var(--color-text-muted); }
     .article-content ul { margin-left: 1.5rem; margin-bottom: var(--spacing-md); }
     .article-content li { margin-bottom: 0.75rem; }
+    .share-bar { margin: var(--spacing-md) 0 var(--spacing-lg); padding: 1.25rem; border: 1px solid rgba(245, 233, 211, 0.08); border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(59, 26, 58, 0.12), rgba(26, 26, 26, 0.7)); }
+    .share-title { font-family: var(--font-serif); font-size: 1.1rem; letter-spacing: 0.05em; margin-bottom: var(--spacing-sm); }
+    .share-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .share-button { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1rem; border-radius: 999px; border: 1px solid rgba(245, 233, 211, 0.25); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--color-text); background-color: rgba(0, 0, 0, 0.35); transition: transform 120ms ease-out, border-color 160ms ease-out, background-color 160ms ease-out; }
+    .share-button:hover { transform: translateY(-1px); border-color: var(--color-text); background-color: rgba(59, 26, 58, 0.25); }
     .back-link { display: inline-block; padding: 0.75rem 1.6rem; border-radius: 999px; border: 1px solid rgba(245, 233, 211, 0.35); font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-text-muted); transition: border-color 160ms ease-out, transform 120ms ease-out; margin-bottom: var(--spacing-lg); }
     .back-link:hover { border-color: var(--color-text); transform: translateY(-1px); }
     footer { border-top: 1px solid rgba(245, 233, 211, 0.08); padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg); font-size: 0.8rem; color: var(--color-text-muted); }
@@ -198,6 +203,16 @@
             <img src="https://media.licdn.com/dms/image/v2/D4D12AQGiLbgYNu0ZXg/article-inline_image-shrink_1000_1488/B4DZr_UHoYGQAQ-/0/1765220056145?e=1767225600&amp;v=beta&amp;t=QEkHLAfpzVJ7FCYqV5_8GKgQQaJHt8zfW4-NYv-xbcQ" alt="Artículo" style="width:100%; border-radius: var(--radius-md); margin-top: var(--spacing-lg);">
           </figure>
         </div>
+        <div class="share-bar" aria-label="Compartir este artículo">
+          <div class="share-title">Comparte este artículo</div>
+          <div class="share-buttons">
+            <a class="share-button" id="share-facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a class="share-button" id="share-linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="share-button" id="share-x" target="_blank" rel="noopener noreferrer">X</a>
+            <a class="share-button" id="share-instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="share-button" id="share-reddit" target="_blank" rel="noopener noreferrer">Reddit</a>
+          </div>
+        </div>
         <!-- Acción para volver -->
         <div class="article-actions">
           <a class="btn btn-outline" href="publicaciones.html">Volver a publicaciones</a>
@@ -220,6 +235,15 @@
   </footer>
 
   <script>
+    const shareUrl = encodeURIComponent(window.location.href);
+    const shareText = encodeURIComponent(document.querySelector('.article-title').textContent.trim());
+
+    document.getElementById('share-facebook').href = `https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`;
+    document.getElementById('share-linkedin').href = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+    document.getElementById('share-x').href = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
+    document.getElementById('share-instagram').href = `https://www.instagram.com/?url=${shareUrl}`;
+    document.getElementById('share-reddit').href = `https://www.reddit.com/submit?url=${shareUrl}&title=${shareText}`;
+
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
