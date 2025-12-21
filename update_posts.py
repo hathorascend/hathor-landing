@@ -3,7 +3,6 @@
 """
 Actualiza automáticamente publicaciones.html con nuevos posts
 """
-
 import os
 import re
 from datetime import datetime
@@ -13,7 +12,7 @@ def scan_posts():
     posts = []
     
     if not os.path.exists('posts_md'):
-        print("⚠️  No existe la carpeta posts_md/")
+        print("⚠️ No existe la carpeta posts_md/")
         return posts
     
     for filename in os.listdir('posts_md'):
@@ -21,7 +20,7 @@ def scan_posts():
             filepath = os.path.join('posts_md', filename)
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read()
-                
+            
             if content.startswith('---'):
                 parts = content.split('---', 2)
                 if len(parts) >= 3:
@@ -32,7 +31,7 @@ def scan_posts():
                             frontmatter[key.strip()] = value.strip().strip('"').strip("'")
                     
                     posts.append({
-                        'filename': filename.replace('.md', '.html'),
+                        'filename': f"publicaciones/{filename.replace('.md', '.html')}",
                         'title': frontmatter.get('title', 'Sin título'),
                         'date': frontmatter.get('date', ''),
                         'category': frontmatter.get('category', 'General'),
@@ -60,19 +59,21 @@ def generate_post_cards(posts):
     for post in posts:
         date_formatted = format_date(post['date'])
         cards_html += f'''
-            <div class="post-card">
-                <div class="post-category">{post['category']}</div>
-                <h3><a href="{post['filename']}">{post['title']}</a></h3>
-                <p class="post-date">{date_formatted}</p>
-                <p>{post['excerpt']}</p>
-                <a href="{post['filename']}" class="read-more">Leer más →</a>
+        <div class="post-card">
+            <div class="post-date">{date_formatted}</div>
+            <h2 class="post-title">{post['title']}</h2>
+            <div class="post-meta">
+                <span class="post-category">{post['category']}</span>
             </div>
-'''
+            <p>{post['excerpt']}</p>
+            <a href="{post['filename']}" class="read-more">Leer más +</a>
+        </div>
+        '''
     
     return cards_html
 
 def main():
-    print("🔍 Escaneando publicaciones...")
+    print("🔄 Escaneando publicaciones...")
     posts = scan_posts()
     
     if not posts:
@@ -94,10 +95,10 @@ def main():
     with open('publicaciones.html', 'w', encoding='utf-8') as f:
         f.write(new_html)
     
-    print("✅ publicaciones.html actualizado")
+    print(f"✅ publicaciones.html actualizado")
     print("\nPublicaciones añadidas:")
     for post in posts:
-        print(f"   • {post['title']}")
+        print(f"  • {post['title']}")
 
 if __name__ == "__main__":
     main()
