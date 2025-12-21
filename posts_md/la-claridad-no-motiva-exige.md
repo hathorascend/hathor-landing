@@ -45,8 +45,9 @@ Eso es claridad aplicada.
 
 Durante las próximas 24 horas, identifica una decisión que ya sabes que debes tomar y has evitado. Elimina una opción. Solo una. No la reemplaces por otra. Sostén esa pérdida.
 
-## Cierre
+## Recuerda!!!
 
 La claridad no te abraza.  
 Te coloca frente a ti mismo.  
 Y te exige vivir a la altura de lo que ya sabes.
+<img src="../imagenes/5.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 50%;">
