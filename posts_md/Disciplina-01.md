@@ -1,8 +1,7 @@
 ```md
 ---
 title: "Lo que repites cada día te define más que lo que sueñas"
-date: 2025-12-01
-category: "Disciplina"
+date: 2025-12-21category: "Disciplina"
 excerpt: "Tu identidad no está en tus planes ni en tus ideas pendientes: está en lo que repites. Si hay contradicción entre tus sueños y tus hábitos, siempre gana tu agenda."
 ---
 
