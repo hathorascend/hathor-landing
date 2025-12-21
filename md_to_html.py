@@ -43,8 +43,7 @@ def markdown_to_html(md_content):
     
     html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
-    lines = html.split('
-')
+    lines = html.split('\n'))
     in_blockquote = False
     result_lines = []
     
@@ -63,8 +62,7 @@ def markdown_to_html(md_content):
     if in_blockquote:
         result_lines.append('</blockquote>')
     
-    html = '
-'.join(result_lines)
+    html = '\n'.join(result_lines)
     
     html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
