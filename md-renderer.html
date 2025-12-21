@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cargando... - Hathor Ascend</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <div class="brand">
+                <div class="brand-logo">HA</div>
+                <div class="brand-text">
+                    <div class="brand-name">Hathor Ascend</div>
+                    <div class="brand-tagline">Disciplina · Claridad · Estructura</div>
+                </div>
+            </div>
+            <nav class="nav" aria-label="Navegación principal">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#sistema">Sistema</a>
+                <a href="index.html#para-quien">Para quién</a>
+                <a href="publicaciones.html">Publicaciones</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="page">
+            <a href="publicaciones.html" class="back-link">← Volver a publicaciones</a>
+            
+            <article class="article-content" id="content">
+                <p>Cargando contenido...</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Hathor Ascend. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Obtener el parámetro 'post' de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postFile = urlParams.get('post');
+
+        if (!postFile) {
+            document.getElementById('content').innerHTML = '<p>Error: No se especificó ningún post.</p><p>Usa: md-renderer.html?post=posts_md/nombre-archivo.md</p>';
+        } else {
+            // Cargar el archivo markdown
+            fetch(postFile)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('No se pudo cargar el archivo');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    // Extraer frontmatter
+                    const frontmatterRegex = /^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n/;
+                    const match = markdown.match(frontmatterRegex);
+                    
+                    let title = 'Sin título';
+                    let date = '';
+                    let category = '';
+                    let content = markdown;
+
+                    if (match) {
+                        const frontmatter = match[1];
+                        content = markdown.replace(match[0], '');
+                        
+                        // Extraer title
+                        const titleMatch = frontmatter.match(/title:\\s*[\"'](.+?)[\"']/);
+                        if (titleMatch) title = titleMatch[1];
+                        
+                        // Extraer date
+                        const dateMatch = frontmatter.match(/date:\\s*(\\d{4}-\\d{2}-\\d{2})/);
+                        if (dateMatch) {
+                            const d = new Date(dateMatch[1]);
+                            const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+                            date = `${d.getDate()} de ${months[d.getMonth()]}, ${d.getFullYear()}`;
+                        }
+                        
+                        // Extraer category
+                        const catMatch = frontmatter.match(/category:\\s*[\"'](.+?)[\"']/);
+                        if (catMatch) category = catMatch[1];
+                    }
+
+                    // Actualizar título de la página
+                    document.title = `${title} - Hathor Ascend`;
+
+                    // Convertir markdown a HTML
+                    const html = marked.parse(content);
+
+                    // Crear el HTML con metadatos
+                    let articleHTML = '';
+                    if (category || date) {
+                        articleHTML += '<div class="article-meta">';
+                        if (category) articleHTML += `<span class="category">${category}</span>`;
+                        if (date) articleHTML += `<time datetime="${date}">${date}</time>`;
+                        articleHTML += '</div>';
+                    }
+                    articleHTML += html;
+
+                    // Insertar el contenido
+                    document.getElementById('content').innerHTML = articleHTML;
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = `<p>Error al cargar el contenido: ${error.message}</p><p>Archivo solicitado: ${postFile}</p>`;
+                });
+        }
+    </script>
+</body>
+</html>
