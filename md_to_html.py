@@ -91,19 +91,29 @@ def markdown_to_html(md_content):
         list_processed.append('</ol>')
 
     html = '\n'.join(list_processed)
-
+    
+    
     # Párrafos
     paragraphs = []
+    # Normaliza saltos de línea múltiples
+    html = re.sub(r'\n{3,}', '\n\n', html)
+
     for para in html.split('\n\n'):
         para = para.strip()
         if not para:
             continue
-        if para.startswith('<'):
+
+        # Si el bloque ya es HTML de bloque, no lo envuelvas
+        if para.startswith('<h') or para.startswith('<ol') or para.startswith('<ul') \
+           or para.startswith('<li') or para.startswith('<blockquote') \
+           or para.startswith('</blockquote') or para.startswith('<p'):
             paragraphs.append(para)
         else:
             paragraphs.append(f'<p>{para}</p>')
 
     return '\n\n'.join(paragraphs)
+
+    
 
 
 def create_html_page(frontmatter, content_html, output_filename):
