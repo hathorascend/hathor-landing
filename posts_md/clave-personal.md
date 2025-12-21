@@ -108,7 +108,7 @@ Disciplina, en este contexto, es usar esos bloques protegidos para:
 Ejecución no es hacer muchas cosas.  
 Es mover de forma consistente lo que definiste como esencial.
 
-## Que debes Guardar
+## Que debes Guardar y Reflexionar
 
 El ruido no te deja pensar, pero te permite seguir diciendo que estás ocupado.
 
