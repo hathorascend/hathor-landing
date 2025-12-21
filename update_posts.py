@@ -86,7 +86,7 @@ def main():
     
     cards_html = generate_post_cards(posts)
     
-    pattern = r'(<div class="posts-grid">)(.*?)(</div>\s*</div>\s*</main>)'
+    pattern = r'(<div class="articles-grid">)(.*?)(</div>\s*</div>\s*</main>)'
     replacement = r'\1' + cards_html + r'\3'
     
     new_html = re.sub(pattern, replacement, html_content, flags=re.DOTALL)
