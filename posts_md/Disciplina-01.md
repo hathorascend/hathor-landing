@@ -1,4 +1,3 @@
-```md
 ---
 title: "Lo que repites cada día te define más que lo que sueñas"
 date: 2025-12-21category: "Disciplina"
