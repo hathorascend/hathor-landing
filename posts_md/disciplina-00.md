@@ -8,7 +8,7 @@ excerpt: "La emoción acompaña, pero no sostiene. La disciplina aparece cuando 
 image: "imagenes/disciplina-termina-emocion.jpg"
 ---
 
-# La disciplina comienza cuando termina la emoción
+
 
 ## Cuando la motivación ya no está
 
@@ -95,3 +95,4 @@ Cuando la emoción termina, la vida adulta empieza.
 
 Ahí no se construye un hábito.  
 Se construye una identidad.
+<img src="../imagenes/1.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 50%;">
