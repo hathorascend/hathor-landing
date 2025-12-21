@@ -1,7 +1,6 @@
-```md
 ---
 title: "La disciplina comienza cuando termina la emoción"
-date: 2025-12-01
+date: 2025-12-21
 category: "Disciplina"
 excerpt: "La emoción acompaña, pero no sostiene. La disciplina aparece cuando ya no apetece: cuando la mente negocia, el cuerpo protesta y aun así decides cumplir."
 ---
