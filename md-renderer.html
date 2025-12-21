@@ -50,7 +50,7 @@
             document.getElementById('content').innerHTML = '<p>Error: No se especificó ningún post.</p><p>Usa: md-renderer.html?post=posts_md/nombre-archivo.md</p>';
         } else {
             // Cargar el archivo markdown
-            fetch(postFile)
+            fetch(`https://raw.githubusercontent.com/hathorascend/hathor-landing/main/${postFile}`)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('No se pudo cargar el archivo');
