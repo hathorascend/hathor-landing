@@ -34,14 +34,14 @@ def markdown_to_html(md_content):
     html = md_content
     
     # Convertir encabezados (mantenemos solo ## y ###, ya que el H1 va en el template)
-    html = re.sub(r'^### (.+)$', r'<h3>\\1</h3>', html, flags=re.MULTILINE)
-    html = re.sub(r'^## (.+)$', r'<h2>\\1</h2>', html, flags=re.MULTILINE)
-    html = re.sub(r'^\*\* (.+)$', r'<h1>\\1</h1>', html, flags=re.MULTILINE)
+    html = re.sub(r'^### (.+)$', r'<h3>\1</h3>', html, flags=re.MULTILINE)
+    html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
+    html = re.sub(r'^\*\* (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
     
-    html = re.sub(r'^\*\*(.*?)\*\*$', r'<strong>\\1</strong>', html)
-    html = re.sub(r'^\*(.+?)\*$', r'<em>\\1</em>', html)
+    html = re.sub(r'^\*\*(.*?)\*\*$', r'<strong>\1</strong>', html)
+    html = re.sub(r'^\*(.+?)\*$', r'<em>\1</em>', html)
     
-    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\\1</li>', html, flags=re.MULTILINE)
+    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
     lines = html.split('\\n')
     in_blockquote = False
@@ -64,9 +64,9 @@ def markdown_to_html(md_content):
     
     html = '\\n'.join(result_lines)
     
-    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\\1</li>', html, flags=re.MULTILINE)
+    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
-    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\\1</li>', html, flags=re.MULTILINE)
+    html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
     paragraphs = []
     for para in html.split('\\n\\n'):
