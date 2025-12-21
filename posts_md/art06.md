@@ -8,7 +8,7 @@ excerpt: "La autodisciplina no está diseñada para agradarte, sino para sostene
 
 
 La autodisciplina no está hecha para gustarte.  
-Está hecha para sostenerte cuando ya no hay ganas.
+Está hecha para sostenerte cuando ya **no** hay ganas.
 
 Si crees que avanzar debería sentirse bien, ya empezaste mal.  
 El progreso real no se anuncia con emoción. Se evidencia con repetición.
