@@ -108,7 +108,7 @@ Disciplina, en este contexto, es usar esos bloques protegidos para:
 Ejecución no es hacer muchas cosas.  
 Es mover de forma consistente lo que definiste como esencial.
 
-## Conclusión
+## Que debes Guardar
 
 El ruido no te deja pensar, pero te permite seguir diciendo que estás ocupado.
 
@@ -121,3 +121,5 @@ Si no proteges tu atención, no estás dirigiendo ni tu agenda ni tu organizaci�
 Solo estás reaccionando a lo que suena más fuerte.
 
 La pregunta no es cuántas cosas llevas encima, sino cuántas seguirías haciendo si tuvieras el coraje de admitir qué no aporta nada.
+
+<img src="../imagenes/art04.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 50%;">
