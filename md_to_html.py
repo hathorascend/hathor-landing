@@ -38,12 +38,13 @@ def markdown_to_html(md_content):
     html = re.sub(r'^## (.+)$', r'<h2>\1</h2>', html, flags=re.MULTILINE)
     html = re.sub(r'^\*\* (.+)$', r'<h1>\1</h1>', html, flags=re.MULTILINE)
     
-    html = re.sub(r'^\*\*(.*?)\*\*$', r'<strong>\1</strong>', html)
-    html = re.sub(r'^\*(.+?)\*$', r'<em>\1</em>', html)
+    html = re.sub(r'\*\*(.*?)\*\*', r'<strong>\1</strong>', html)
+    html = re.sub(r'\*(.+?)\*', r'<em>\1</em>', html)
     
     html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
-    lines = html.split('\\n')
+    lines = html.split('
+')
     in_blockquote = False
     result_lines = []
     
@@ -62,21 +63,26 @@ def markdown_to_html(md_content):
     if in_blockquote:
         result_lines.append('</blockquote>')
     
-    html = '\\n'.join(result_lines)
+    html = '
+'.join(result_lines)
     
     html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
     html = re.sub(r'^\\d+\\. (.+)$', r'<li>\1</li>', html, flags=re.MULTILINE)
     
     paragraphs = []
-    for para in html.split('\\n\\n'):
+    for para in html.split('
+
+'):
         para = para.strip()
         if para and not para.startswith('<'):
             para = '<p>' + para + '</p>'
         if para:
             paragraphs.append(para)
     
-    return '\\n\\n'.join(paragraphs)
+    return '
+
+'.join(paragraphs)
 
 def create_html_page(frontmatter, content_html, output_filename):
     title = frontmatter.get('title', 'Sin título')
