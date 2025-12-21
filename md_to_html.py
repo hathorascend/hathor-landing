@@ -1,8 +1,3 @@
-diff --git a/md_to_html.py b/md_to_html.py
-index bd30e9d442bdfe6282a4ff948654701b9de01988..99eeb77ab6f43353cb323db09a814b70b6565499 100644
---- a/md_to_html.py
-+++ b/md_to_html.py
-@@ -1,175 +1,200 @@
  import sys
  import os
  import re
