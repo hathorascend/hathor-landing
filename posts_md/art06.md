@@ -5,7 +5,7 @@ category: "Disciplina"
 excerpt: "La autodisciplina no está diseñada para agradarte, sino para sostenerte cuando desaparecen las ganas. El progreso real no se siente bien: se repite."
 ---
 
-# La autodisciplina no se siente bien. Funciona.
+
 
 La autodisciplina no está hecha para gustarte.  
 Está hecha para sostenerte cuando ya no hay ganas.
