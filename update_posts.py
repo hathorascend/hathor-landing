@@ -61,7 +61,11 @@ def generate_post_cards(posts):
         cards_html += f'''
         <div class="post-card">
             <div class="post-date">{date_formatted}</div>
-            <h2 class="post-title">{post['title']}</h2>
+            <h2 class="post-title">
+                <a href="{post['filename']}">{post['title']}
+                </a>
+            </h2>
+
             <div class="post-meta">
                 <span class="post-category">{post['category']}</span>
             </div>
