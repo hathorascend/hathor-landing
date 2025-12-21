@@ -37,6 +37,8 @@ Ahí empieza a aparecer el sentido.
 ## Cierre
 
 Deja de buscar propósito como si fuera una respuesta externa.  
+
+<img src="imagenes/9.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 100%;">
 Empieza a cumplir decisiones.
 
 La dirección no llega antes de la acción.  
