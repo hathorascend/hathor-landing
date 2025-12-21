@@ -124,6 +124,8 @@ def create_html_page(frontmatter, content_html, output_filename):
                     <time datetime="{date}">{date}</time>
                 </div>
                 
+                <h1>{title}</h1>
+                
                 {content_html}
             </article>
         </div>
