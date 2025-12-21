@@ -8,8 +8,7 @@ excerpt: "La claridad no calma. Presiona. Cuando una situación se vuelve clara,
 image: "imagenes/claridad.jpg"
 ---
 
-# La claridad no motiva. Exige.
-
+## Hablando de claridad .....
 La mayoría cree que la claridad llega para aliviar.  
 Creen que entender algo debería hacerlos sentir mejor.  
 No funciona así.
