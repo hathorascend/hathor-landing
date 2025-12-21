@@ -8,9 +8,8 @@ on:
   workflow_dispatch:
 
 
-  permissions:
+permissions:
   contents: write
-
 jobs:
   process-markdown:
     runs-on: ubuntu-latest
