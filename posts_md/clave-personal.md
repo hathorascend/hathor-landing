@@ -8,7 +8,6 @@ excerpt: "No es falta de trabajo, es exceso de ruido. Cuando no filtras, dejas d
 image: "imagenes/ruido-ocupado-claridad.jpg"
 ---
 
-# El ruido no te deja pensar, pero te hace sentir ocupado
 
 ## Cuando estar ocupado sustituye a pensar
 
