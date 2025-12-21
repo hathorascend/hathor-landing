@@ -4,9 +4,10 @@ date: 2025-12-21
 category: "Ejecución"
 excerpt: "El propósito no se encuentra pensando más, sino cumpliendo decisiones pequeñas de forma consistente. La dirección aparece después de la acción sostenida."
 ---
+## Si no lo tienes .... Presta atencion.
 
 El propósito no aparece pensando más.  
-Aparece cuando dejas de fallarte.
+Aparece cuando **dejas de fallarte**.
 
 La mayoría de las personas no está perdida.  
 Está **inconsistente**.
