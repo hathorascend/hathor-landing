@@ -64,5 +64,8 @@ Te hace confiable.
 Respetuoso de ti mismo
 Y una persona que se cumple  
 no necesita motivación para avanzar.
-.
-<img src="../imagenes/6.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 50%;">
+
+<img src="../imagenes/6.jpg"
+     alt="Deja de buscar propósito. Empieza a cumplir decisiones"
+     style="display:block; margin:0 auto; max-width:50%;">
+
