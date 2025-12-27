@@ -122,5 +122,5 @@ Este punto —dejar de justificar y empezar a comprometerte— es exactamente do
 Si estás ahí, no necesitas más contenido.  
 Necesitas claridad, estructura y decisiones que se cumplan.
 
-<img src="../imagenes/10.jpg" alt="La madurez del emprendedor">
-a madurez del emprendedor" style="max-width: 50%;">
+<img src="../imagenes/10.jpg" alt="La madurez del emprendedor" style="max-width: 50%;">
+
