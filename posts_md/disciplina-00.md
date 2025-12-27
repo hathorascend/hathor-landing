@@ -96,4 +96,4 @@ Cuando la emoción termina, la vida adulta empieza.
 Ahí no se construye un hábito.  
 Se construye una identidad.
 
-<img src="../imagenes/1.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 50%;">
+<img src="../imagenes/1.jpg" alt="Deja de buscar propósito. Empieza a cumplir decisiones" style="max-width: 80%;">
