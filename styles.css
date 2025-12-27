@@ -341,3 +341,77 @@ footer {
     flex-wrap: wrap;
   }
 }
+
+/* Botones de compartir en publicaciones */
+.share-buttons {
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(245, 233, 211, 0.1);
+}
+
+.share-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.share-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.2rem;
+    border-radius: 999px;
+    border: 1px solid rgba(245, 233, 211, 0.25);
+    background-color: transparent;
+    color: var(--color-text);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 160ms ease-out;
+}
+
+.share-btn svg {
+    flex-shrink: 0;
+}
+
+.share-btn:hover,
+.share-btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--color-text);
+    background-color: rgba(245, 233, 211, 0.05);
+}
+
+.share-btn.whatsapp:hover {
+    border-color: #25D366;
+    color: #25D366;
+}
+
+.share-btn.linkedin:hover {
+    border-color: #0A66C2;
+    color: #0A66C2;
+}
+
+.share-btn.facebook:hover {
+    border-color: #1877F2;
+    color: #1877F2;
+}
+
+@media (max-width: 640px) {
+    .share-icons {
+        flex-direction: column;
+    }
+    
+    .share-btn {
+        justify-content: center;
+        width: 100%;
+    }
+}
