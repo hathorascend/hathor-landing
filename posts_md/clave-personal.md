@@ -1,6 +1,6 @@
 ---
 title: "El ruido no te deja pensar, pero te hace sentir ocupado"
-date: 2025-02-01
+date: 2025-08-01
 author: "Moisés Aponte"
 category: "Transformación Personal"
 tags: ["claridad", "foco", "liderazgo", "estructura", "disciplina"]
