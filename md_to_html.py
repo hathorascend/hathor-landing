@@ -120,8 +120,7 @@ def create_html_page(frontmatter, content_html, output_filename):
     title = frontmatter.get('title', 'Sin título')
     date = frontmatter.get('date', datetime.now().strftime('%Y-%m-%d'))
     author = frontmatter.get('author', 'Moisés Aponte')
-    category = frontmatter.get('category', 'Transformación Personal, base_name')
-
+    category = frontmatter.get('category', 'Transformación Personal')
     html_template = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
