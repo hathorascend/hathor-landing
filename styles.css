@@ -139,6 +139,17 @@ main {
   transition: width 160ms ease-out;
 }
 
+/* Estado activo para indicar página actual */
+.nav a.activo {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+.nav a.activo::after {
+    width: 100%;
+    background-color: var(--color-accent);
+}
+
 .nav a:hover::after,
 .nav a:focus-visible::after {
   width: 100%;
