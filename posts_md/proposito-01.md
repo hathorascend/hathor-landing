@@ -1,6 +1,6 @@
 ---
 title: "Deja de buscar propósito. Empieza a cumplir decisiones."
-date: 2025-12-21
+date: 2025-11-21
 category: "Ejecución"
 excerpt: "El propósito no se encuentra pensando más, sino cumpliendo decisiones pequeñas de forma consistente. La dirección aparece después de la acción sostenida."
 ---
