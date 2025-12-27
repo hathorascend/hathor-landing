@@ -116,7 +116,8 @@ def markdown_to_html(md_content):
     
 
 
-def create_html_page(frontmatter, content_html, output_filename):
+def create_html_page(frontmatter, content_html, output_filename, base_name):
+
     title = frontmatter.get('title', 'Sin título')
     date = frontmatter.get('date', datetime.now().strftime('%Y-%m-%d'))
     author = frontmatter.get('author', 'Moisés Aponte')
