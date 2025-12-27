@@ -1,6 +1,6 @@
 ---
 title: "La autodisciplina no se siente bien. Funciona."
-date: 2025-12-21
+date: 2025-07-21
 category: "Disciplina"
 excerpt: "La autodisciplina no está diseñada para agradarte, sino para sostenerte cuando desaparecen las ganas. El progreso real no se siente bien: se repite."
 ---
