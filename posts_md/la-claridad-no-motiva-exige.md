@@ -1,6 +1,6 @@
 ---
 title: "La claridad no motiva. Exige."
-date: 2025-12-21
+date: 2025-10-21
 author: "Moisés Aponte"
 category: "Claridad"
 tags: ["claridad", "decisión", "acción", "responsabilidad"]
