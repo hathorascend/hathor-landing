@@ -1,10 +1,11 @@
 /* Hathor Ascend - Estilos Globales (Modificado)
-   Generado: 2025-12-21
+   Generado: 2025-12-21 - Actualizado 2025-12-28
 
    Modificaciones:
    - Se reemplaza el negro puro (#000000) por un gris muy oscuro (#121212) para el fondo global (color-bg).
    - Se incrementa el espacio entre las tarjetas de artículos utilizando la variable --spacing-lg.
    - Se ajusta el tamaño de fuente y la altura de línea del extracto de los artículos para mejorar la legibilidad.
+   - Se consolida todo el CSS del index.html para uso en todas las páginas HTML del sitio.
 */
 
 :root {
@@ -488,4 +489,217 @@ footer {
     padding: 0.25rem 0;
   }
 }
+}
+
+/* ===================================
+   ESTILOS DEL INDEX.HTML CONSOLIDADOS
+   =================================== */
+
+/* Hero */
+.hero {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: minmax(0, 3fr);
+  gap: var(--spacing-lg);
+}
+
+.hero-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5vw, 3.4rem);
+  line-height: 1.12;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-subtitle {
+  max-width: 32rem;
+  font-size: 0.98rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+/* Botones - Consolidado */
+.btn-outline {
+  color: var(--color-text-muted);
+  border-color: rgba(245, 233, 211, 0.35);
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  border-color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+/* Sections */
+section {
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-top: 1px solid rgba(245, 233, 211, 0.05);
+}
+
+.section-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.section-kicker {
+  font-size: 0.76rem;
+  letter-spacing: 0.18em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-lead {
+  margin-top: 0.75rem;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+/* Sistema Hathor - Pillars */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.pillar {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.4rem;
+  border: 1px solid rgba(245, 233, 211, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-height: 100%;
+}
+
+.pillar-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.pillar-name {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.pillar-body {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+/* Target / Split Layout */
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.2fr);
+  gap: var(--spacing-lg);
+  align-items: flex-start;
+}
+
+.list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.list li::before {
+  content: "—";
+  margin-right: 0.4rem;
+  color: var(--color-text);
+}
+
+/* Quote / Manifesto */
+.manifesto {
+  background-color: var(--color-bg-alt);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(245, 233, 211, 0.12);
+  text-align: center;
+}
+
+.manifesto-quote {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  margin-bottom: 0.75rem;
+}
+
+.manifesto-caption {
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Media Queries Adicionales */
+@media (max-width: 900px) {
+  .pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .split {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero {
+    padding-top: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pillars {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .manifesto {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
