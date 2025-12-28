@@ -303,6 +303,46 @@ main {
   background-color: rgba(59, 26, 58, 0.25);
 }
 
+.btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 233, 211, 0.45);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background-color: transparent;
+      cursor: pointer;
+      transition: background-color 160ms ease-out, border-color 160ms ease-out,
+        transform 120ms ease-out;
+    }
+
+    .btn-primary {
+      background-color: var(--color-text);
+      color: #000;
+      border-color: var(--color-text);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background-color: #ffffff;
+      border-color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      color: var(--color-text-muted);
+      border-color: rgba(245, 233, 211, 0.35);
+    }
+
+    .btn-outline:hover,
+    .btn-outline:focus-visible {
+      border-color: var(--color-text);
+      transform: translateY(-1px);
+    }
+
 /* Footer */
 footer {
   border-top: 1px solid rgba(245, 233, 211, 0.08);
