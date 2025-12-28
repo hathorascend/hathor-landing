@@ -120,7 +120,7 @@ Si has llegado hasta aquí y este texto te incomodó un poco, no es casualidad.
 Este punto —dejar de justificar y empezar a comprometerte— es exactamente donde muchos proyectos se quedan estancados durante años.
 
 Si estás ahí, no necesitas más contenido.  
-Necesitas claridad, estructura y decisiones que se cumplan.
+Necesitas claridad, estructura y decisiones que se cumplan. 
 
 <img src="../imagenes/10.jpg" alt="La madurez del emprendedor" style="max-width: 50%;">
 
