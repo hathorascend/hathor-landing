@@ -419,21 +419,7 @@ footer {
    RESPONSIVE - HEADER NAVIGATION
    =================================== */
 
-/* Tablets y pantallas medianas */
-@media (max-width: 900px) {
-  .header-inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  
-  .nav {
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    font-size: 0.9rem;
-  }
-}
-.btn {
+   .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -461,6 +447,22 @@ footer {
       border-color: #ffffff;
       transform: translateY(-1px);
     }
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
 /* Móviles */
 @media (max-width: 640px) {
   .header {
