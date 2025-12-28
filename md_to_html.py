@@ -199,6 +199,19 @@ def create_html_page(frontmatter, content_html, output_filename, base_name):
             </div>
             
             </article>
+                    <!-- Bloque CTA coaching estratégico -->
+        <section class="ha-cta-coaching">
+          <p>
+            Si este artículo describe más de lo que te gustaría admitir
+            y quieres trabajar esto con estructura, no con buenas intenciones,
+            puedes solicitar un proceso de coaching estratégico 1:1 conmigo.
+          </p>
+          <p>
+            <a href="/coaching-estrategico.html">
+              Ver cómo funciona el proceso de coaching estratégico Hathor →
+            </a>
+          </p>
+        </section>
         </div>
     </main>
     <footer>
