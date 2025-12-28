@@ -414,4 +414,49 @@ footer {
         justify-content: center;
         width: 100%;
     }
+
+   /* ===================================
+   RESPONSIVE - HEADER NAVIGATION
+   =================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 900px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Móviles */
+@media (max-width: 640px) {
+  .header {
+    padding: 1rem 0;
+  }
+  
+  .header-inner {
+    gap: 1.5rem;
+  }
+  
+  .brand {
+    width: 100%;
+  }
+  
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  
+  .nav a {
+    padding: 0.25rem 0;
+  }
+}
 }
