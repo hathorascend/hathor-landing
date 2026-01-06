@@ -1,0 +1,11 @@
+# robots.txt for https://www.hathorascend.com
+
+User-agent: *
+Allow: /
+
+# Disallow crawling of admin and private directories
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap
+Sitemap: https://www.hathorascend.com/sitemap.xml
