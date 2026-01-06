@@ -1,0 +1,6 @@
+Contact: mailto:contacto@hathorascend.com
+Expires: 2026-12-31
+Preferred-Languages: es, en
+Canonical: https://www.hathorascend.com/.well-known/security.txt
+Policy: https://www.hathorascend.com/aviso-legal
+Acknowledgments: https://www.hathorascend.com/
