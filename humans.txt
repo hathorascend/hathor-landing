@@ -1,0 +1,18 @@
+/* TEAM */
+Founder: Moisés Aponte
+Contact: contacto [at] hathorascend.com
+Location: Spain
+
+/* SITE */
+Project: Hathor Ascend
+URL: https://www.hathorascend.com
+Last update: 2026/01/06
+Language: Spanish / English
+Stack: GitHub Pages, Cloudflare
+
+/* VALUES */
+Clarity: We help you see what's real, not what's comfortable
+Discipline: Execution over motivation, systems over inspiration
+Transformation: We guide leaders to become who they need to be
+Accountability: Progress measured through action, not intention
+Strategy: Every decision aligned with your deeper purpose
