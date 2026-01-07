@@ -143,8 +143,8 @@ def create_html_page(frontmatter, content_html, output_filename, base_name):
             </div>
             <nav class="nav" aria-label="Navegación principal">
                 <a href="../index.html">Inicio</a>
-                <a href="index.html#sistema">Sistema</a>
-                <a href="index.html#para-quien">Para quién</a>
+                <a href="../index.html#sistema">Sistema</a>
+                <a href="../index.html#para-quien">Para quién</a>
                 <a href="../publicaciones.html">Publicaciones</a>
             </nav>
         </div>
