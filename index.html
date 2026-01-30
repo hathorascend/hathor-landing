@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hathor Ascend — Disciplina, Claridad, Estructura</title>
+  <meta name="description" content="Sistema de coaching ejecutivo para profesionales que quieren resultados sostenibles. Disciplina real, no motivación pasajera." />
+  
+  <link rel="canonical" href="https://hathorascend.com/" />
+
+  <meta property="og:title" content="Hathor Ascend — No buscas motivación, necesitas disciplina" />
+  <meta property="og:description" content="Sistema de coaching ejecutivo para profesionales que quieren resultados sostenibles, no promesas pasajeras." />
+  <meta property="og:url" content="https://hathorascend.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hathorascend.com/imagenes/og-hathor-autoengano-disciplina.jpg" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-bg: #000000;           /* Negro profundo */
+      --color-bg-alt: #111111;       /* Negro ligeramente más claro para tarjetas */
+      --color-accent: #3B1A3A;       
+      --color-text: #F5E9D3;         /* Crema editorial */
+      --color-text-muted: #C7BBA6;
+      --color-border: rgba(245, 233, 211, 0.15);
+
+      --font-serif: "Cormorant Garamond", "Playfair Display", serif;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+      --max-width: 960px;
+      --spacing-xl: 6rem;
+      --spacing-lg: 3.5rem;
+      --spacing-md: 2rem;
+      --spacing-sm: 1rem;
+      --radius-md: 4px; /* Bordes más rectos para look más adulto */
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    
+    body {
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.8; }
+    
+    .page {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-sm);
+    }
+
+    /* HEADER */
+    .header {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(12px);
+      background: rgba(0, 0, 0, 0.85);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1rem var(--spacing-sm);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .nav {
+      display: flex; gap: 1.5rem;
+      font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+    }
+    .nav a { position: relative; }
+    .nav a::after {
+      content: ""; position: absolute; left: 0; bottom: -4px; width: 0; height: 1px;
+      background-color: var(--color-text); transition: width 0.3s;
+    }
+    .nav a:hover::after { width: 100%; }
+
+    /* TYPOGRAPHY UTILS */
+    h1, h2, h3 { font-family: var(--font-serif); font-weight: 500; line-height: 1.2; }
+    .kicker {
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--color-text-muted); display: block; margin-bottom: 1rem;
+    }
+    .text-lead {
+      font-size: 1.1rem; color: var(--color-text-muted); max-width: 600px;
+    }
+
+    /* SECTIONS COMMON */
+    section { padding: var(--spacing-xl) 0; border-bottom: 1px solid var(--color-border); }
+    .section-header { margin-bottom: var(--spacing-lg); }
+    .section-title { font-size: 2.2rem; margin-bottom: 1rem; }
+
+    /* HERO */
+    .hero {
+      padding: 8rem 0 6rem;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 1.5rem;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      max-width: 500px;
+      margin-bottom: 2.5rem;
+    }
+    
+    /* BUTTONS */
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border: 1px solid var(--color-text);
+      font-size: 0.8rem; letter-spacing: 0.2em; text-transform: uppercase;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--color-text); color: var(--color-bg);
+    }
+    .btn-primary:hover {
+      background: #fff; transform: translateY(-2px);
+    }
+    .btn-outline {
+      background: transparent; color: var(--color-text); border-color: var(--color-border);
+    }
+    .btn-outline:hover {
+      border-color: var(--color-text);
+    }
+
+    /* PROBLEMA (Bullet Points) */
+    .problem-list {
+      list-style: none;
+      display: grid; gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .problem-list li {
+      position: relative; padding-left: 2rem;
+      color: var(--color-text-muted);
+    }
+    .problem-list li::before {
+      content: "×"; position: absolute; left: 0; color: #ff4444; font-size: 1.2rem;
+    }
+
+    /* DIFERENCIACION (Table) */
+    .comparison-table {
+      width: 100%; border-collapse: collapse; margin-top: 2rem;
+      border: 1px solid var(--color-border);
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 1.5rem; text-align: left; border-bottom: 1px solid var(--color-border);
+    }
+    .comparison-table th {
+      font-family: var(--font-serif); font-size: 1.2rem; letter-spacing: 0.05em;
+    }
+    .comparison-table td:first-child {
+      color: var(--color-text-muted); width: 50%; border-right: 1px solid var(--color-border);
+    }
+    .comparison-table td:last-child {
+      color: var(--color-text); font-weight: 500;
+    }
+
+    /* PILLARS (Grid) */
+    .pillars-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .pillar-card {
+      background: var(--color-bg-alt); padding: 2rem; border: 1px solid var(--color-border);
+    }
+    .pillar-title {
+      font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.1em;
+      margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    /* TIMELINE (How it works) */
+    .timeline {
+      border-left: 1px solid var(--color-border); margin-left: 1rem; padding-left: 2rem;
+    }
+    .timeline-item { position: relative; margin-bottom: 3rem; }
+    .timeline-item::before {
+      content: ""; position: absolute; left: -2.35rem; top: 0.5rem;
+      width: 10px; height: 10px; background: var(--color-text); border-radius: 50%;
+    }
+    .timeline-week {
+      font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-text-muted);
+    }
+    .timeline-title { font-size: 1.4rem; margin: 0.5rem 0 1rem; font-family: var(--font-serif); }
+
+    /* FAQ */
+    .faq-grid { display: grid; gap: 2rem; margin-top: 2rem; }
+    .faq-item h4 { font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--color-text); }
+    .faq-item p { font-size: 0.95rem; color: var(--color-text-muted); }
+
+    /* FOOTER */
+    footer { padding: 4rem 0; font-size: 0.8rem; color: var(--color-text-muted); }
+    .footer-links { margin-top: 1rem; display: flex; gap: 1rem; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.5rem; }
+      .nav { display: none; } /* Simplificado para este ejemplo, idealmente menú hamburguesa */
+      .comparison-table th, .comparison-table td { padding: 1rem; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand-name">Hathor Ascend</div>
+      <nav class="nav">
+        <a href="#sistema">Sistema</a>
+        <a href="#problema">El Problema</a>
+        <a href="publicaciones.html">Publicaciones</a>
+        <a href="coaching-estrategico.html">Coaching 1:1</a>
+        <a href="acerca.html">Acerca</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+      
+      <section class="hero">
+        <span class="kicker">Coaching Ejecutivo & Estrategia</span>
+        <h1 class="hero-title">
+          No buscas motivación.<br>
+          <span style="color: var(--color-text-muted);">Necesitas disciplina.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Sistema de coaching ejecutivo para profesionales que quieren resultados sostenibles, no promesas pasajeras. Para adultos que construyen, no que sueñan.
+        </p>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="https://calendly.com/PON-TU-LINK-AQUI" target="_blank" class="btn btn-primary">
+            Agendar Diagnóstico (30 min)
+          </a>
+          <a href="publicaciones.html" class="btn btn-outline">
+            Leer Artículos
+          </a>
+        </div>
+      </section>
+
+      <section id="problema">
+        <div class="section-header">
+          <span class="kicker">Diagnóstico</span>
+          <h2 class="section-title">¿Te reconoces aquí?</h2>
+          <p class="text-lead">Si tu problema no es falta de deseo, sino falta de estructura para sostenerlo, estás en el lugar correcto.</p>
+        </div>
+        <ul class="problem-list">
+          <li>Estableciste objetivos claros hace meses, pero no mantienes las acciones día a día para alcanzarlos.</li>
+          <li>Intentas hábitos nuevos (meditación, estrategia, prospección), los comienzas bien, pero se desmoronan en 3 semanas.</li>
+          <li>Reconoces patrones: cambias de idea, te dejas llevar por lo urgente y deshaces lo que construiste.</li>
+          <li>Tu mayor frustración no es la falta de oportunidad, es la brecha entre quién quieres ser y quién actúas ser día a día.</li>
+        </ul>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <span class="kicker">Enfoque</span>
+          <h2 class="section-title">Hathor no inspira. Ordena.</h2>
+        </div>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Coaching Tradicional</th>
+              <th>Sistema Hathor Ascend</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Inspira, motiva, emociona</td>
+              <td>Ordena, estructura, ejecuta</td>
+            </tr>
+            <tr>
+              <td>Te ayuda a "soñar en grande"</td>
+              <td>Te enseña a sostener lo que decides</td>
+            </tr>
+            <tr>
+              <td>Depende de tu entusiasmo</td>
+              <td>Depende de tu disciplina (entrenable)</td>
+            </tr>
+            <tr>
+              <td>"¿Cómo te sientes?"</td>
+              <td>"¿Qué vas a hacer y cuándo?"</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="sistema">
+        <div class="section-header">
+          <span class="kicker">Metodología</span>
+          <h2 class="section-title">Los 4 Pilares de Disciplina</h2>
+        </div>
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <span class="pillar-title">01. Diagnóstico Adulto</span>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+              Mapeo claro de tu verdadero problema (no el que crees que es) y dónde estás fugando energía. Un plan específico, no genérico.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-title">02. Arquitectura</span>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+              Te enseñamos a tomar decisiones que sostienes. Cómo descomponer objetivos en acciones diarias y blindar los puntos de fallo.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-title">03. Sistemas</span>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+              No se trata de cambiar tu mentalidad, sino tu entorno. Instalamos hábitos y triggers que funcionan sin depender de la motivación.
+            </p>
+          </article>
+          <article class="pillar-card">
+            <span class="pillar-title">04. Accountability</span>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+              Revisión quincenal. Escalamos lo que funciona, eliminamos lo que no. Un sistema vivo que evoluciona contigo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="section-header">
+          <span class="kicker">El Proceso</span>
+          <h2 class="section-title">Tu viaje de 12 semanas</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-week">Semanas 1–2</span>
+            <h3 class="timeline-title">Diagnóstico y Diseño</h3>
+            <p class="text-lead" style="font-size: 0.9rem;">Mapeo profundo de tu situación. Análisis de patrones de fallo. Diseño de tu plan específico y primera semana de ejecución con soporte intenso.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-week">Semanas 3–6</span>
+            <h3 class="timeline-title">Instalación de Pilares</h3>
+            <p class="text-lead" style="font-size: 0.9rem;">Sesiones quincenales. Construcción de hábitos clave. Ajustes basados en la realidad (no en teoría). Consolidación de estructura.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-week">Semanas 7–12</span>
+            <h3 class="timeline-title">Escala y Sostenibilidad</h3>
+            <p class="text-lead" style="font-size: 0.9rem;">Expandimos lo que funciona. Enfrentamos resistencias internas. Plan de mantenimiento para que sostengas el sistema sin necesitarme.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 2rem;">Preguntas Frecuentes</h2>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h4>¿Es para emprendedores o ejecutivos?</h4>
+            <p>Para ambos. El sistema funciona para cualquiera que necesite estructura. La disciplina es universal.</p>
+          </div>
+          <div class="faq-item">
+            <h4>¿Necesito estar "motivado" para empezar?</h4>
+            <p>No. Si esperas a estar motivado, nunca empezarás. El sistema está diseñado para funcionar cuando no tienes ganas.</p>
+          </div>
+          <div class="faq-item">
+            <h4>¿Es compatible con una agenda ocupada?</h4>
+            <p>Sí. Las sesiones son quincenales. El trabajo diario ("la tarea") toma 5-10 minutos. Está diseñado para gente operativa.</p>
+          </div>
+        </div>
+      </section>
+
+      <section style="text-align: center; border-bottom: none;">
+        <h2 class="section-title">No esperes a estar listo.</h2>
+        <p class="text-lead" style="margin: 0 auto 2rem auto;">
+          La brecha entre quien eres hoy y quien quieres ser se cierra con un plan claro y ejecución diaria.
+        </p>
+        <a href="https://calendly.com/PON-TU-LINK-AQUI" target="_blank" class="btn btn-primary" style="padding: 1.2rem 2.5rem; font-size: 0.9rem;">
+          Agendar Sesión de Diagnóstico
+        </a>
+        <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--color-text-muted);">
+          Sin costo. Sin compromiso. Claridad pura.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="page" style="border-top: 1px solid var(--color-border); padding-top: 2rem;">
+      <p>© <span id="year"></span> Hathor Ascend. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/moises-aponte" target="_blank">LinkedIn</a>
+        <a href="publicaciones.html">Publicaciones</a>
+        <a href="politicas.html">Políticas</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
