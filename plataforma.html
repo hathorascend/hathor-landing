@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plataforma de Coaching | Hathor Ascend</title>
+    <meta name="description" content="Accede a la plataforma profesional de coaching estratégico de Hathor Ascend" />
+    
+    <!-- Fuentes oficiales -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garmond:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-bg: #000000;
+            --color-bg-alt: #1A1A1B;
+            --color-text: #FFFFFF;
+            --color-text-muted: #999999;
+            --color-accent: #2563eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cormorant Garmond', serif;
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            letter-spacing: 2px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: var(--color-text-muted);
+            margin-bottom: 50px;
+            max-width: 600px;
+        }
+        
+        .platform-card {
+            background: var(--color-bg-alt);
+            border: 1px solid #333;
+            padding: 50px 40px;
+            border-radius: 4px;
+            margin: 40px 0;
+            width: 100%;
+            max-width: 600px;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+            text-align: left;
+        }
+        
+        .feature {
+            font-size: 16px;
+            color: var(--color-text-muted);
+        }
+        
+        .feature::before {
+            content: "→";
+            margin-right: 10px;
+            color: var(--color-accent);
+        }
+        
+        .btn-primary {
+            display: inline-block;
+            background: var(--color-text);
+            color: var(--color-bg);
+            padding: 18px 50px;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Cormorant Garmond', serif;
+            letter-spacing: 1px;
+        }
+        
+        .btn-primary:hover {
+            background: var(--color-text-muted);
+            transform: translateY(-2px);
+        }
+        
+        .access-note {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            margin-top: 30px;
+            font-style: italic;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #333;
+            color: var(--color-text-muted);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .platform-card {
+                padding: 40px 30px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">HATHOR ASCEND</div>
+        
+        <h1>Plataforma de Coaching Estratégico</h1>
+        
+        <p class="subtitle">
+            Sistema profesional para coaches: gestión de clientes, sesiones,
+            herramientas de evaluación y análisis con inteligencia artificial.
+        </p>
+        
+        <div class="platform-card">
+            <div class="features">
+                <div class="feature">Dashboard con métricas</div>
+                <div class="feature">Gestión de clientes</div>
+                <div class="feature">Sesiones y seguimiento</div>
+                <div class="feature">Rueda de la Vida</div>
+                <div class="feature">Test VAK</div>
+                <div class="feature">Análisis con IA</div>
+                <div class="feature">Banco de preguntas</div>
+                <div class="feature">Reportes en PDF</div>
+            </div>
+            
+            <a href="https://becoach-pro-now.base44.app" class="btn-primary" target="_blank">
+                Acceder a la Plataforma
+            </a>
+            
+            <p class="access-note">
+                Acceso exclusivo para coaches autorizados<br>
+                Requiere inicio de sesión
+            </p>
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2026 Hathor Ascend — Disciplina para Adultos
+    </footer>
+</body>
+</html>
